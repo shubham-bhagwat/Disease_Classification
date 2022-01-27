@@ -13,3 +13,5 @@ data = tf.keras.preprocessing.image_dataset_from_directory(
     image_size=(IMAGE_SIZE,IMAGE_SIZE),
     batch_size=BATCH_SIZE
 )
+
+class names
