@@ -6,11 +6,14 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 
-MODEL = tf.keras.models.load_model("models/1")
+app = FastAPI()
+
+endpoint = "http://localhost:8000/v1/models/potatoes_model:predict"
+
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
 
-app = FastAPI()
+
 @app.get("/ping")
 async def ping():
     return "Hello i am alive"
